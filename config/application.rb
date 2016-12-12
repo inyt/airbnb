@@ -18,7 +18,7 @@ Bundler.require(*Rails.groups)
 
 module Airbnb
   class Application < Rails::Application
-    config.time_zone = ‘Tokyo’
+    config.time_zone = 'Tokyo'
     config.i18n.default_locale = :ja
     config.generators do |g|
       g.test_framework   false
