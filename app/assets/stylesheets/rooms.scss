@@ -1,3 +1,43 @@
-// Place all the styles related to the rooms controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.header{
+  height: 60px;
+  font-size: 12px;
+  .icon{
+    height: 100%;
+    width: 60px;
+    float: left;
+    i.fa.fa-bed{
+      color: #ec5f5f;
+      padding: 10px;
+    }
+  }
+  .hire-host{
+    float: right;
+    padding: 17px 19px;
+  }
+  .host-menu{
+    float: right;
+    padding: 17px 19px;
+  }
+  .trips-comp{
+    float: right;
+    padding: 17px 19px;
+  }
+  .message-link{
+    float: right;
+    padding: 17px 19px;
+  }
+  .help-link{
+    float: right;
+    padding: 17px 19px;
+  }
+  .user-avator{
+    float: right;
+    padding: 17px 19px;
+  }
+}
+
+.cardSlide{
+  height: 550px;
+}
+
+
