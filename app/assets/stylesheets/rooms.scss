@@ -1,42 +1,189 @@
-.header{
-  height: 60px;
-  font-size: 12px;
-  color: yellow;
-  .icon{
-    height: 100%;
-    width: 60px;
-    float: left;
-    i.fa.fa-bed{
-      color: #ec5f5f;
-      padding: 10px;
-    }
-  }
-  .hire-host{
-    float: right;
-    padding: 17px 19px;
-  }
-  .host-menu{
-    float: right;
-    padding: 17px 19px;
-  }
-  .trips-comp{
-    float: right;
-    padding: 17px 19px;
-  }
-  .message-link{
-    float: right;
-    padding: 17px 19px;
-  }
-  .help-link{
-    float: right;
-    padding: 17px 19px;
-  }
-  .user-avator{
-    float: right;
-    padding: 17px 19px;
-  }
-}
-
 .cardSlide{
   height: 550px;
 }
+
+
+.text-header-container{
+  width: 60%;
+  h1.text-header{
+    font-family: inherit;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #484848;
+    margin: 0px;
+    font-weight: 200;
+    span.text-airbnb{
+      color: #FF5A5F;
+      font-weight: 700;
+    }
+  }
+}
+
+
+.page-container{
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 24px;
+  .search-form{
+    // position: relative;
+    display: table;
+    // table-layout: fixed;
+    width: 100%;
+    height: 84px;
+    border: 1px solid #dce0e0;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 #dce0e0;
+    form{
+      display: table;
+      width: 100%;
+      .input-wrapper{
+        width: 100%;
+        position: relative;
+        display: table-row;
+        table-layout: fixed;
+        float: none;
+        padding-left: 0;
+        padding-right: 0;
+        .search-form-location{
+          padding: 15px 16px 8px;
+          display: table-cell;
+          width: 35%;
+          float: none;
+          label{
+            font-size: 15px;
+            letter-spacing: -0.5px;
+            white-space: nowrap;
+            display: block;
+          }
+          input{
+            border-style: hidden;
+            font-size: 19px;
+            letter-spacing: -0.5px;
+            line-height: 22px;
+            padding: 8px 0;
+          }
+        }
+        .search-form-dates{
+          display: table-cell;
+          width: 35%;
+          padding: 15px 16px 8px;
+          float: none;
+          border-left-style: solid;
+          border-left-width: 1px;
+          border-left-color: #dce0e0;
+          label{
+            font-size: 15px;
+            letter-spacing: -0.5px;
+            white-space: nowrap;
+            display: block;
+          }
+        }
+        .search-form-guests{
+          display: table-cell;
+          width: 17%;
+          padding: 15px 16px 8px;
+          float: none;
+          border-left-style: solid;
+          border-left-width: 1px;
+          border-left-color: #dce0e0;
+          button{
+            border-style: hidden;
+            border-left: 0;
+            border-radius: 0;
+            padding: 0;
+            outline: none;
+            background-color: #fff;
+            span{
+              font-size: 19px;
+              letter-spacing: -0.5px;
+              line-height: 22px;
+              padding: 18px 0 4.75px 0;
+            }
+          }
+        }
+        .search-form-submit{
+          padding: 15px 16px 8px;
+          display: table-cell;
+          float: none;
+          font-size: 19px;
+          letter-spacing: -0.5px;
+          line-height: 22px;
+          width: 13%;
+          vertical-align: middle;
+          padding-bottom: 16px;
+          .btn{
+            line-height: 24px;
+            padding: 16px 10px;
+            border-radius: 4px;
+            width: 100%;
+            font-size: 18px;
+            padding-top: 11px;
+            padding-bottom: 11px;
+            font-weight: normal;
+            float: right;
+            border-color: #ff5a5f;
+            background-color: #ff5a5f;
+            color: #fff;
+            border: 1px solid;
+          }
+        }
+      }
+    }
+  }
+}
+
+span#room-name{
+  font-weight: 700;
+  color: #484848;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  margin: 0px;
+  word-wrap: break-word;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.6px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+span#room-addres{
+  font-weight: 200;
+  color: #484848;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  margin: 0px;
+  word-wrap: break-word;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  display: inline;
+}
+
+footer{
+  margin-top: 48px;
+  .col-md-2{
+    float: left;
+    width: 16.6667%;
+    margin-left: 8.33333%;
+    padding: 0 3px;
+    color: #484848;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    h2{
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    ul li{
+      font-size: 12px;
+    }
+  }
+}
+
+
+
