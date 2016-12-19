@@ -1,8 +1,10 @@
 @import "text_header";
+@import "card_swipe";
 @import "search_form";
+@import "show";
 
 h3{
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-family: ヒラギノ角ゴ;
   font-size: 19px;
   line-height: 24px;
   color: #484848;
@@ -76,32 +78,7 @@ h3{
 
 
 
-span#room-name{
-  font-weight: 700;
-  color: #484848;
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
-  margin: 0px;
-  word-wrap: break-word;
-  font-size: 36px;
-  line-height: 44px;
-  letter-spacing: -0.6px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
 
-span#room-addres{
-  font-weight: 200;
-  color: #484848;
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
-  margin: 0px;
-  word-wrap: break-word;
-  font-size: 15px;
-  line-height: 18px;
-  letter-spacing: 0.2px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  display: inline;
-}
 
 
 

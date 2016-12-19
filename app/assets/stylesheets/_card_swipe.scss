@@ -1,0 +1,36 @@
+.swipe-container{
+  width: 100%;
+  height: 550px;
+  .card-container{
+    width: 100%;
+    height: 550px;
+    .card_one{
+      width: inherit;
+      height: inherit;
+      background-image: url('slide/posters_sm.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .card_two{
+      width: inherit;
+      height: inherit;
+      background-image: url('slide/keynote_desktop.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .card_three{
+      width: inherit;
+      height: inherit;
+      background-image: url('slide/experiences-hero-desktop.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .card_four{
+      width: inherit;
+      height: inherit;
+      background-image: url('slide/places_desktop_lg.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
