@@ -1,0 +1,220 @@
+%header.clearfix
+  .pull-left
+    = link_to "/" do
+      .icon_box
+        %i.fa.fa-bug.fa-2x
+  .pull-right.height_100
+    = link_to "/login", class: "header_link_container" do
+      .header_content
+        %span ログイン
+  .pull-right
+    =link_to "/signup_login", class: "header_link_container" do
+      .header_content
+        %span アカウント作成
+  .pull-right
+    =link_to "/signup_login", class: "header_link_container" do
+      .header_content
+        %span ヘルプ
+  .pull-right
+    =link_to "/signup_login", class: "header_link_container" do
+      .header_content
+        %span ホストする時間がない方はこちら
+  .pull-right
+    =link_to "/signup_login", class: "header_link_container" do
+      .header_content
+        %span ホストになる
+.main
+  .sidebar
+    .panel-body
+      .row
+        .col-lg-2.col-md-12.space-sm-1.text-center-sm.text-center-md
+          %span 日付
+        .col-lg-9.col-md-11
+          .row
+            .col-md-4.col-sm-6.space-1-sm
+              %input.checkin{name: "checkin", placeholder: "チェックイン"}
+            .col-md-4.col-sm-6.space-1-sm
+              %input.checkout{name: "checkout", placeholder: "チェックアウト"}
+            .col-md-4.col-sm-12.space-1-sm
+              %button.GuestPickerTrigger
+                %span 宿泊1人
+      %hr
+    .panel-body
+      .row
+        .col-lg-2.col-md-12.text-center-sm.text-center-md.space-sm-1
+          %span 価格帯
+        .col-lg-9.col-md-11
+          %input#price-slide{"data-slider-max" => "100000", "data-slider-min" => "1000", "data-slider-step" => "100", "data-slider-value" => "[1000,100000]", :type => "text", :value => ""}/
+          .row
+            .col-lg-6.text-left
+              %span ¥1200
+            .col-lg-6.text-right
+              %span ¥100000+
+      %hr
+    .search-results
+      .section-container
+        .row.result-container
+          .col-md-6
+            = link_to '#host-profile', class: 'search-result-link' do
+              = image_tag 'room/greece_2.jpg', class: 'search-result-image'
+            .info-container
+              = link_to '/rooms/1' do
+                .row.price-review
+                  .col-md-6
+                    %spna ¥46958
+                  .col-md-6.text-right
+                    %span ★★★★★レビュー105件
+                %span Malibu Dream Airstream
+                %br
+                %span まるまる貸切・ベッド1台・3人
+          .col-md-6
+            = link_to '#host-profile', class: 'search-result-link' do
+              = image_tag 'room/greece_2.jpg', class: 'search-result-image'
+            .info-container
+              = link_to '/rooms/1' do
+                .row.price-review
+                  .col-md-6
+                    %spna ¥46958
+                  .col-md-6.text-right
+                    %span ★★★★★レビュー105件
+                %span Malibu Dream Airstream
+                %br
+                %span まるまる貸切・ベッド1台・3人
+        .row.result-container
+          .col-md-6
+            = link_to '#host-profile', class: 'search-result-link' do
+              = image_tag 'room/greece_2.jpg', class: 'search-result-image'
+            .info-container
+              = link_to '/rooms/1' do
+                .row.price-review
+                  .col-md-6
+                    %spna ¥46958
+                  .col-md-6.text-right
+                    %span ★★★★★レビュー105件
+                %span Malibu Dream Airstream
+                %br
+                %span まるまる貸切・ベッド1台・3人
+          .col-md-6
+            = link_to '#host-profile', class: 'search-result-link' do
+              = image_tag 'room/greece_2.jpg', class: 'search-result-image'
+            .info-container
+              = link_to '/rooms/1' do
+                .row.price-review
+                  .col-md-6
+                    %spna ¥46958
+                  .col-md-6.text-right
+                    %span ★★★★★レビュー105件
+                %span Malibu Dream Airstream
+                %br
+                %span まるまる貸切・ベッド1台・3人
+        .row.result-container
+          .col-md-6
+            = link_to '#host-profile', class: 'search-result-link' do
+              = image_tag 'room/greece_2.jpg', class: 'search-result-image'
+            .info-container
+              = link_to '/rooms/1' do
+                .row.price-review
+                  .col-md-6
+                    %spna ¥46958
+                  .col-md-6.text-right
+                    %span ★★★★★レビュー105件
+                %span Malibu Dream Airstream
+                %br
+                %span まるまる貸切・ベッド1台・3人
+          .col-md-6
+            = link_to '#host-profile', class: 'search-result-link' do
+              = image_tag 'room/greece_2.jpg', class: 'search-result-image'
+            .info-container
+              = link_to '/rooms/1' do
+                .row.price-review
+                  .col-md-6
+                    %spna ¥46958
+                  .col-md-6.text-right
+                    %span ★★★★★レビュー105件
+                %span Malibu Dream Airstream
+                %br
+                %span まるまる貸切・ベッド1台・3人
+        .row.result-container
+          .col-md-6
+            = link_to '#host-profile', class: 'search-result-link' do
+              = image_tag 'room/greece_2.jpg', class: 'search-result-image'
+            .info-container
+              = link_to '/rooms/1' do
+                .row.price-review
+                  .col-md-6
+                    %spna ¥46958
+                  .col-md-6.text-right
+                    %span ★★★★★レビュー105件
+                %span Malibu Dream Airstream
+                %br
+                %span まるまる貸切・ベッド1台・3人
+          .col-md-6
+            = link_to '#host-profile', class: 'search-result-link' do
+              = image_tag 'room/greece_2.jpg', class: 'search-result-image'
+            .info-container
+              = link_to '/rooms/1' do
+                .row.price-review
+                  .col-md-6
+                    %spna ¥46958
+                  .col-md-6.text-right
+                    %span ★★★★★レビュー105件
+                %span Malibu Dream Airstream
+                %br
+                %span まるまる貸切・ベッド1台・3人
+        .row.result-container
+          .col-md-6
+            = link_to '#host-profile', class: 'search-result-link' do
+              = image_tag 'room/greece_2.jpg', class: 'search-result-image'
+            .info-container
+              = link_to '/rooms/1' do
+                .row.price-review
+                  .col-md-6
+                    %spna ¥46958
+                  .col-md-6.text-right
+                    %span ★★★★★レビュー105件
+                %span Malibu Dream Airstream
+                %br
+                %span まるまる貸切・ベッド1台・3人
+          .col-md-6
+            = link_to '#host-profile', class: 'search-result-link' do
+              = image_tag 'room/greece_2.jpg', class: 'search-result-image'
+            .info-container
+              = link_to '/rooms/1' do
+                .row.price-review
+                  .col-md-6
+                    %spna ¥46958
+                  .col-md-6.text-right
+                    %span ★★★★★レビュー105件
+                %span Malibu Dream Airstream
+                %br
+                %span まるまる貸切・ベッド1台・3人
+        .row.result-container
+          .col-md-6
+            = link_to '#host-profile', class: 'search-result-link' do
+              = image_tag 'room/greece_2.jpg', class: 'search-result-image'
+            .info-container
+              = link_to '/rooms/1' do
+                .row.price-review
+                  .col-md-6
+                    %spna ¥46958
+                  .col-md-6.text-right
+                    %span ★★★★★レビュー105件
+                %span Malibu Dream Airstream
+                %br
+                %span まるまる貸切・ベッド1台・3人
+          .col-md-6
+            = link_to '#host-profile', class: 'search-result-link' do
+              = image_tag 'room/greece_2.jpg', class: 'search-result-image'
+            .info-container
+              = link_to '/rooms/1' do
+                .row.price-review
+                  .col-md-6
+                    %spna ¥46958
+                  .col-md-6.text-right
+                    %span ★★★★★レビュー105件
+                %span Malibu Dream Airstream
+                %br
+                %span まるまる貸切・ベッド1台・3人
+
+  .map
+    .search-results-map#searchMap

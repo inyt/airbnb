@@ -5,10 +5,16 @@
     %title Airbnb
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = stylesheet_link_tag '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css'
-    = stylesheet_link_tag '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css'
     = favicon_link_tag
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'
+    = javascript_include_tag 'http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'
+    = javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAXbvOKObMqITgrrvsCSne77MDEA3T9f8o&callback=initMap', async: 'async'
+    -# = javascript_include_tag 'http://cdn.jsdelivr.net/jquery/1/jquery.min.js'
+    = javascript_include_tag 'http://cdn.jsdelivr.net/momentjs/latest/moment.min.js'
+    = stylesheet_link_tag 'http://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css'
+    = javascript_include_tag 'http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js'
+    = stylesheet_link_tag 'http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css'
+    = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.5.4/bootstrap-slider.min.js'
+    = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.5.4/css/bootstrap-slider.min.css'
   %body
     = yield

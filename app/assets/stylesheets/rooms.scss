@@ -76,6 +76,13 @@ h3{
   }
 }
 
+.col-md-2, .col-md-1, .col-md-4{
+  overflow: hidden;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
 
 
 

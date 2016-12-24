@@ -1,19 +1,12 @@
 footer{
-  margin-top: 48px;
-  .col-md-2{
-    float: left;
-    width: 16.6667%;
-    margin-left: 8.33333%;
-    padding: 0 3px;
-    color: #484848;
-    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    h2{
-      font-size: 15px;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
-    ul li{
-      font-size: 12px;
-    }
-  }
+  padding: 48px 0;
+}
+
+.page-1080px{
+  width: 1080px;
+  margin: auto;
+}
+
+.margin-bottom-8px{
+  margin: 8px 0;
 }

@@ -1,39 +1,115 @@
 %footer.clearfix
-  .language-curr-picker.col-md-2
-    %label{for: "language-selector"}
+  .container-fluid.page-1080px
+    .row
+      .col-md-2.language-curr-picker
+        .col-sm-6.col-md-12.margin-bottom-8px
+          %select#language-selector.form-control.bfh-languages
+            %option{:value => "id"} Bahasa Indonesia
+            %option{:value => "ms"} Bahasa Melayu
+            %option{:value => "ca"} Català
+            %option{:value => "da"} Dansk
+            %option{:value => "de"} Deutsch
+            %option{:value => "en"} English
+            %option{:value => "es"} Español
+            %option{:value => "el"} Eλληνικά
+            %option{:value => "fr"} Français
+            %option{:value => "it"} Italiano
+            %option{:value => "hu"} Magyar
+            %option{:value => "nl"} Nederlands
+            %option{:value => "no"} Norsk
+            %option{:value => "pl"} Polski
+            %option{:value => "pt"} Português
+            %option{:value => "fi"} Suomi
+            %option{:value => "sv"} Svenska
+            %option{:value => "tr"} Türkçe
+            %option{:value => "is"} Íslenska
+            %option{:value => "cs"} Čeština
+            %option{:value => "ru"} Русский
+            %option{:value => "th"} ภาษาไทย
+            %option{:value => "zh"} 中文 (简体)
+            %option{:value => "zh-TW"} 中文 (繁體)
+            %option{:value => "ja", :selected => "selected"} 日本語
+            %option{:value => "ko"} 한국어
+          -# %label{for: "language-selector"}
+        .col-sm-6.col-md-12
+          %select.form-control.bfh-currencies{"data-currency" => "EUR"}
+            %option{:value => "AED"} AED
+            %option{:value => "ARS"} ARS
+            %option{:value => "AUD"} AUD
+            %option{:value => "BGN"} BGN
+            %option{:value => "BRL"} BRL
+            %option{:value => "CAD"} CAD
+            %option{:value => "CHF"} CHF
+            %option{:value => "CLP"} CLP
+            %option{:value => "CNY"} CNY
+            %option{:value => "COP"} COP
+            %option{:value => "CRC"} CRC
+            %option{:value => "CZK"} CZK
+            %option{:value => "DKK"} DKK
+            %option{:value => "EUR"} EUR
+            %option{:value => "GBP"} GBP
+            %option{:value => "HKD"} HKD
+            %option{:value => "HRK"} HRK
+            %option{:value => "HUF"} HUF
+            %option{:value => "IDR"} IDR
+            %option{:value => "ILS"} ILS
+            %option{:value => "INR"} INR
+            %option{:value => "JPY", :selected => "selected"} JPY
+            %option{:value => "KRW"} KRW
+            %option{:value => "MAD"} MAD
+            %option{:value => "MXN"} MXN
+            %option{:value => "MYR"} MYR
+            %option{:value => "NOK"} NOK
+            %option{:value => "NZD"} NZD
+            %option{:value => "PEN"} PEN
+            %option{:value => "PHP"} PHP
+            %option{:value => "PLN"} PLN
+            %option{:value => "RON"} RON
+            %option{:value => "RUB"} RUB
+            %option{:value => "SAR"} SAR
+            %option{:value => "SEK"} SEK
+            %option{:value => "SGD"} SGD
+            %option{:value => "THB"} THB
+            %option{:value => "TRY"} TRY
+            %option{:value => "TWD"} TWD
+            %option{:value => "UAH"} UAH
+            %option{:value => "USD"} USD
+            %option{:value => "UYU"} UYU
+            %option{:value => "VND"} VND
+            %option{:value => "ZAR"} ZAR
 
-  .col-md-2
-    %h2 Airbnb
-    %ul.list-layout
-      %li
-        %a Airbnbとは
-      %li
-        %a 採用情報
-      %li
-        %a プレス
-      %li
-        %a ポリシー
-      %li
-        %a ヘルプ
-  .col-md-2
-    %h2 スタッフのおすすめ
-    %ul.list-layout
-      %li
-        %a 信頼&安全
-      %li
-        %a お友達紹介クーポン
-      %li
-        %a Airbnb Citizen
-      %li
-        %a 出張
-      %li
-        %a ガイドブック
-  .col-md-2
-    %h2 ホスティング
-    %ul.list-layout
-      %li
-        %a ホストになる理由
-      %li
-        %a おもてなしの心
-      %li
-        %a ホストの責任
+      .col-md-2.col-md-offset-1.hide-sm
+        %h5 Airbnb
+        %ul.list-layout
+          %li
+            %a Airbnbとは
+          %li
+            %a 採用情報
+          %li
+            %a プレス
+          %li
+            %a ポリシー
+          %li
+            %a ヘルプ
+      .col-md-2.col-md-offset-1.hide-sm
+        %h5 スタッフのおすすめ
+        %ul.list-layout
+          %li
+            %a 信頼&安全
+          %li
+            %a お友達紹介クーポン
+          %li
+            %a Airbnb Citizen
+          %li
+            %a 出張
+          %li
+            %a ガイドブック
+      .col-md-2.col-md-offset-1.hide-sm
+        %h5 ホスティング
+        %ul.list-layout
+          %li
+            %a ホストになる理由
+          %li
+            %a おもてなしの心
+          %li
+            %a ホストの責任

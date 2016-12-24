@@ -4,9 +4,24 @@
       %i.fa.fa-tripadvisor.fa-3x
       -# %img 
     .header-content
-      .user-avator 写真
+      %button.btn.btn-primary.user-avator{"data-target" => "#myModal", "data-toggle" => "modal", type: "button"} ログイン
       .help-link ヘルプ
       .message-link メッセージ
       .trips-comp 旅行
       .host-menu ホスト
       .hire-host ホストする時間がない方はこちら
+
+/ Modal
+#myModal.modal.fade{"aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
+  .modal-dialog{role: "document"}
+    .modal-content
+      .modal-header
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", type: "button"}
+          %span{"aria-hidden" => "true"} ×
+        %h4#myModalLabel.modal-title Modal title
+      .modal-body
+        %h4 メールアドレス
+        %input.col-md-12
+        %h4 パスワード
+        %input.col-md-12
+        %button.btn.btn-primary{:type => "button"} ログイン

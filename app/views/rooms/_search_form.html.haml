@@ -8,11 +8,13 @@
       .search-form-dates
         %label.search-form-label{for: 'start-date'}
           %span 日時
-        .date-range-picker
-          .date-input.date-from
-          .date-range-arrow
+        .start-date
+          .date-range-picker
+            %input{type: 'text', name: 'startDate', id: 'start-date'}
+        .date-range-arrow
+        .end-date
           .date-input.date-end
-          %button
+            %button
       .search-form-guests
         %label.search-form-label{for: 'how-many-guests'}
           %span ゲスト

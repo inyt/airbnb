@@ -1,26 +1,157 @@
-span#room-name{
-  font-weight: 700;
-  color: #484848;
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
-  margin: 0px;
-  word-wrap: break-word;
-  font-size: 36px;
-  line-height: 44px;
-  letter-spacing: -0.6px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+.cover-image{
+  width: 100%;
+  height: 700px;
 }
 
-span#room-addres{
-  font-weight: 200;
+.room-section{
+  font-family: "ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro";
+  margin-top: -40px;
+  padding-top: 40px;
+  .summary-container, .map-panel{
+    width: 1080px;
+    margin: auto;
+    .summary-row{
+      margin-left: -12px;
+      margin-right: -12px;
+      .summary-col{
+        width: 66.6%;
+        float: left;
+        margin: 24px 0;
+        .host-image-container{
+          width: 25%;
+          float: left;
+          .image-col{
+            a{
+              border: 2px solid #fff;
+              img.host-image{
+                border-radius: 50%;
+                height: 90px;
+                width: 90px;
+                display: block;
+              }
+            }
+          }
+        }
+        .summary-text-container{
+          span#room-name{
+            margin-bottom: 6px;
+            color: #767676;
+            font-size: 24px;
+            font-weight: normal;
+            line-height: 1.1;
+          }
+          span#room-addres{
+            font-size: 14px;
+            color: #767676;
+            line-height: 1.43;
+            margin-bottom: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.details-container,.reviews-container{
+  width: 1080px;
+  margin: auto;
+  .details-row{
+    margin-left: -12px;
+    margin-right: -12px;
+    .details-col{
+      width: 66.6%;
+      float: left;
+      margin: 24px 0;
+      h4{
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 24px;
+      }
+      p{
+        margin-bottom: 15px;
+      }
+      .contact-host{
+        button{
+          background: transparent;
+          color: #008489;
+          text-decoration: underline;
+          border: 0;
+          cursor: pointer;
+          font-weight: bold;
+        }
+      }
+      .details{
+        .col-title{
+          width: 25%;
+          float: left;
+        }
+        .col-details{
+          width: 75%;
+          float: left;
+          .col-details-1{
+            width: 50%;
+            float: left;
+          }
+          .col-details-2{
+            width: 50%;
+            float: left;
+          }
+          .bed-type{
+            margin-bottom: 30px;
+          }
+          .button-container{
+            margin-bottom: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.view-calendar, .view-guide{
+  text-decoration: none;
+  color: #008489;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+.review-top{
+  width: calc(100% + 24px);
+  margin-top: 48px;
+  margin-bottom: 12px;
+}
+
+
+.details-col-75{
+  width: 75%;
+  float: left;
+}
+
+.details-col-25{
+  width: 25%;
+  float: left;
+}
+
+.button-block{
+  display: block;
+  white-space: normal;
+  width: 100%;
+  border-color: #c4c4c4;
+  background: white;
   color: #484848;
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
-  margin: 0px;
-  word-wrap: break-word;
-  font-size: 15px;
-  line-height: 18px;
-  letter-spacing: 0.2px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  display: inline;
+  padding: 7px 21px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  line-height: 1.43;
+  cursor: pointer;
+}
+
+#map{
+  height: 600px;
+  width: 900px;
 }
