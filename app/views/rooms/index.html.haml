@@ -4,10 +4,10 @@
 .page-container
   = render 'search_form'
   .container-fluid
-    -# .row#index-row
-    -#   - 3.times do |i|
-    -#     .col-md-4.margin-48px
-    -#       = image_tag @rooms[i].images.first.image_url
-    -#       %p.margin-12px= @rooms[i].name
+    .row#index-row
+      - 3.times do |i|
+        .col-md-4.margin-48px
+          = image_tag @rooms[i].images.first.image_url
+          %p.margin-12px= @rooms[i].name
 
 = render 'footer'
