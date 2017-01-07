@@ -35,56 +35,18 @@ h3{
   }
 }
 
-.exes-container{
+img{
+  width: 100%;
+  height: auto;
+}
+
+.margin-48px{
   margin: 48px 0;
-  .exe-container{
-    width: 24%;
-    padding: 0 8px;
-    display: inline-block;
-    box-sizing: border-box;
-    img{
-      width: 100%;
-      height: auto;
-      display: inline-block;
-      box-sizing: border-box;
-    }
-    .bottomRow{
-      padding: 8px 0;
-      .priceTiele{
-        display: block;
-      }
-    }
-  }
 }
 
-.dests-container{
-  margin: 48px 0;
-  .dest-container{
-    width: 16%;
-    padding: 0 8px;
-    display: inline-block;
-    box-sizing: border-box;
-    img{
-      width: 100%;
-      height: auto;
-      display: inline-block;
-      box-sizing: border-box;
-    }
-    .bottomRow{
-      padding: 8px 0;
-    }
-  }
+.margin-12px{
+  margin: 12px 0;
 }
-
-.col-md-2, .col-md-1, .col-md-4{
-  overflow: hidden;
-  img{
-    width: 100%;
-    height: auto;
-  }
-}
-
-
 
 
 

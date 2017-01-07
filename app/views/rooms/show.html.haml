@@ -17,7 +17,7 @@
           .summary-text-container
             %span#room-name= @room.name
             %br
-            %span#room-addres Imerovigli, Egeo, ギリシャ
+            %span#room-addres= @room.address
             %span#room-rate ★★★★★ 107
     %hr
     .details-container.clearfix
@@ -225,7 +225,7 @@
             .col-title
               %span ガイドブック
             .col-details
-              = link_to '#', class: 'view-guide' do
+              = link_to '#', class: 'view-guide', id: 'to_do' do
                 %strong ロンドンでやるべきこと
     %hr
     .reviews-container.clearfix

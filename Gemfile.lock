@@ -255,6 +255,9 @@ GEM
       railties (>= 3.1.0)
       turbolinks
     json (2.0.2)
+    kaminari (0.17.0)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     kgio (2.10.0)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -398,6 +401,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   jquery-turbolinks
+  kaminari
   listen (~> 3.0.5)
   mysql2 (>= 0.3.18, < 0.5)
   pry-rails

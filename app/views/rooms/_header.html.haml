@@ -1,15 +1,31 @@
-.header
-  %header
-    .icon
-      %i.fa.fa-tripadvisor.fa-3x
-      -# %img 
-    .header-content
-      %button.btn.btn-primary.user-avator{"data-target" => "#myModal", "data-toggle" => "modal", type: "button"} ログイン
-      .help-link ヘルプ
-      .message-link メッセージ
-      .trips-comp 旅行
-      .host-menu ホスト
-      .hire-host ホストする時間がない方はこちら
+%header.clearfix
+  .pull-left
+    = link_to "/" do
+      .icon_box
+        %i.fa.fa-bug.fa-2x
+  .pull-right.height_100
+    .header_content.header_link_container
+      %button.btn.btn-default.user-avator{"data-target": "#myModal", "data-toggle": "modal", type: "button"} ログイン
+  .pull-right
+    =link_to "/signup_login", class: "header_link_container" do
+      .header_content
+        %span アカウント作成
+  .pull-right
+    =link_to "/signup_login", class: "header_link_container" do
+      .header_content
+        %span ヘルプ
+  .pull-right
+    =link_to "/signup_login", class: "header_link_container" do
+      .header_content
+        %span ホストする時間がない方はこちら
+  .pull-right
+    =link_to "/signup_login", class: "header_link_container" do
+      .header_content
+        %span ホストになる
+
+
+
+
 
 / Modal
 #myModal.modal.fade{"aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}

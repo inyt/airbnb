@@ -1,36 +1,14 @@
-.swipe-container{
-  width: 100%;
-  height: 550px;
-  .card-container{
-    width: 100%;
-    height: 550px;
-    .card_one{
-      width: inherit;
-      height: inherit;
-      background-image: url('https://a0.muscache.com/airbnb/static/engagement/p1/large/posters_sm.jpg');
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-    .card_two{
-      width: inherit;
-      height: inherit;
-      background-image: url('https://a0.muscache.com/airbnb/static/engagement/p1/large/experiences-hero-desktop.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-    .card_three{
-      width: inherit;
-      height: inherit;
-      background-image: url('https://a0.muscache.com/airbnb/static/engagement/p1/large/places_desktop_lg.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-    .card_four{
-      width: inherit;
-      height: inherit;
-      background-image: url('https://a0.muscache.com/airbnb/static/engagement/p1/large/keynote_desktop.jpg');
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
+.slide-container{
+  min-width: 960px;
+  height: 465px;
+  position: relative;
+  overflow: hidden;
+  img{
+    width: auto;
+    height: 100%;
+    display: none;
+    position: absolute;
+    left: 50%;
+    margin-left: -800px;
   }
 }

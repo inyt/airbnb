@@ -1,0 +1,48 @@
+%header.clearfix
+  .pull-left
+    = link_to "/" do
+      .icon_box
+        %i.fa.fa-bug.fa-2x
+  .pull-right
+    =link_to "/signup_login", class: "header_link_container" do
+      .header_content
+        %span ホストする時間がない方はこちら
+
+.container-fluid
+  .hosting-main-content.row
+    .col-md-7
+      .landing__left-col-content
+        .space-5
+          %h2
+            %span Yutaさん、こんにちは！さあ、一緒にホスティングの準備を始めましょう。
+      .landing__step-content
+        %strong
+          %span step1
+        .h3
+          %span お部屋のタイプは？
+        .container-fluid
+          .row
+            .col-md-6.space-1
+              %select#language-selector.form-control.bfh-languages
+                %option{:value => ""} 貸切
+                %option{:value => "", :selected => "selected"} 個室
+                %option{:value => ""} シェアルーム
+            .col-md-6.space-1
+              %select#language-selector.form-control.bfh-languages
+                %option{:value => "", :selected => "selected"} 参加1人
+                %option{:value => ""} 参加2人
+                %option{:value => ""} 参加3人
+                %option{:value => ""} 参加4人
+                %option{:value => ""} 参加5人
+                %option{:value => ""} 参加6人
+                %option{:value => ""} 参加7人
+          .row.space-1
+            .col-sm-12
+              %input.pull-left.line-space-location-input{placeholder: "例）中央区", name: "full_address"}
+          = link_to '/become-a-host/room' do
+            %button.btn.btn-success 続行
+    .col-md-5
+      = image_tag 'hosting/flower'
+
+
+= render 'rooms/footer'

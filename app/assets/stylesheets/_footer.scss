@@ -1,3 +1,9 @@
+#loading-gif{
+  display: none;
+  text-align: center;
+  float: center;
+}
+
 footer{
   padding: 48px 0;
 }
@@ -9,4 +15,12 @@ footer{
 
 .margin-bottom-8px{
   margin: 8px 0;
+}
+
+.space-top-8{
+  margin: 48px 0 24px 0;
+}
+
+.padding-8{
+  padding: 0 8px;
 }
