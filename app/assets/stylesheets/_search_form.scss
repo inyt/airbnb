@@ -26,7 +26,7 @@
         padding-right: 0;
         .search-form-location{
           padding: 15px 16px 8px;
-          display: table-cell;
+          // display: table-cell;
           width: 35%;
           float: none;
           label{
@@ -36,11 +36,11 @@
             display: block;
           }
           input{
-            border-style: hidden;
-            font-size: 19px;
-            letter-spacing: -0.5px;
-            line-height: 22px;
-            padding: 8px 0;
+            // border-style: hidden;
+            // font-size: 19px;
+            // letter-spacing: -0.5px;
+            // line-height: 22px;
+            // padding: 8px 0;
           }
         }
         .search-form-dates{
@@ -110,4 +110,8 @@
       }
     }
   }
+}
+
+input.input-date{
+  width: 100%;
 }
