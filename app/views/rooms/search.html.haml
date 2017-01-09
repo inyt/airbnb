@@ -218,3 +218,27 @@
 
   .map
     .search-results-map#searchMap
+
+:javascript
+  function initMap() {
+    // Create the map.
+    var map = new google.maps.Map(document.getElementById('searchMap'), {
+      zoom: 14,
+      center: {lat: 43.0594286, lng: 141.3004602},
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var cityCircle = new google.maps.Circle({
+      strokeColor: '#FF0000',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#FF0000',
+      fillOpacity: 0.35,
+      map: map,
+      center: {lat: 43.0594286, lng: 141.3004602},
+      radius: 500
+  });
+
+  }
+
+%script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyB1BoiSo2jL950_AuFzV-f9ETgKn0uQl2I&signed_in=true&callback=initMap"}

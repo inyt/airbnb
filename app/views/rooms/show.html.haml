@@ -5,241 +5,378 @@
 .cover-image
   = image_tag 'room/greece_2.jpg', class: 'cover-image'
 
-.main-content.clearfix
-  .room-section
-    .summary-container.clearfix
-      .summary-row
-        .summary-col
-          .host-image-container
-            .image-col
-              = link_to '#host-profile' do
-                = image_tag 'https://a1.muscache.com/im/users/35142183/profile_pic/1433607298/original.jpg?aki_policy=profile_x_medium', class: 'host-image'
-          .summary-text-container
-            %span#room-name= @room.name
-            %br
-            %span#room-addres= @room.address
-            %span#room-rate ★★★★★ 107
-    %hr
-    .details-container.clearfix
-      .details-row.clearfix
-        .details-col.clearfix
-          %h4 リスティングについて
-          %p.about-listing
-            %span Fully furnished, light, airy, double room with desk in spacious Victorian house.
-            %br
-            %span Separate living and dining areas.
-            %br
-            %span Quiet, considerate housemates.
-            %br
-            %span Foodies especially welcome. Gay friendly.
-          %p
-            %span Excellent transport links to central London.
-          .contact-host
-            %button
-              %span ホストに連絡
-          %hr
-          .details.clearfix
-            .col-title
-              %span お部屋
-            .col-details
-              .col-details-1
-                %span 収容人数：
-                %strong 1
-                %br
-                %span 寝室：
-                %strong 1
-                %br
-                %span チェックイン：
-                %strong 15:00時以降ならいつでも
-                %br
-                %span 建物タイプ：
-                %strong 一軒家
-              .col-details-2
-                %span バスルーム：
-                %strong 1.5 (共同のバスルーム)
-                %br
-                %span ベッド：
-                %strong 1
-                %br
-                %span チェックアウト：
-                %strong 11:00
-                %br
-                %span 部屋タイプ：
-                %strong 個室
-          %hr
-          .details.clearfix
-            .col-title
-              %span アメニティ・設備
-            .col-details
-              .col-details-1
-                %strong ワイヤレスインターネット
-                %br
-                %strong キッチン
-                %br
-                %strong テレビ
-                %br
-                %strong 洗濯機
-                %br
-                %strong 敷地内無料駐車場
-                %br
-                %strong 暖房
-                %br
-                %strong ビル内にエレベーターあり
-                %br
-                %strong 乾燥機
-                %br
-                %strong インターネット
-                %br
-                %strong ファミリー/子ども連れOK
-                %br
-                %strong ペットOK
-                %br
-                %strong 喫煙OK
-                %br
-                %strong イベントに最適
-                %br
-                %strong ヘアドライヤー
-                %br
-                %strong 朝食
-                %br
-                %strong ジャクージ&高級風呂
-                %br
-              .col-details-2
-                %strong エアコン
-                %br
-                %strong ケーブルテレビ
-                %br
-                %strong セルフチェックイン
-                %br
-                %strong プール
-                %br
-                %strong アイロン
-                %br
-                %strong ノートPC向きのワークスペース
-                %br
-                %strong 室内暖炉・薪ストーブ・囲炉裏
-                %br
-                %strong 必需品
-                %br
-                %strong ハンガー
-                %br
-                %strong シャンプー
-                %br
-                %strong ジム
-                %br
-                %strong 車いすOK
-                %br
-                %strong ワイヤレスインターホン
-                %br
-                %strong ドアマン
-                %br
-                %strong 専用のリビングルーム
-                %br
-                %strong 専用の玄関
-                %br
-          %hr
-          .details.clearfix
-            .col-title
-              %span 料金
-            .col-details
-              .col-details-1
-                %span 保証金：
-                %strong ¥ 22571
-                %br
-                %span 週の割引率：
-                %strong 10%
-              .col-details-2
-                %span 月額割引率：
-                %strong 20%
-                %br
-                %span キャンセル：
-                %strong 普通
-          %hr
-          .details.clearfix
-            .col-title
-              %span お部屋の紹介
-            .col-details
-              .bed-type
-                %spna ベッドのタイプ
-                .bed-icon
-                  %i.fa.fa-bed.fa-2x
-                  %br
-                  %strong 1寝室
-                  %br
-                  %spna ダブルベット1
-              .room-description
-                .button-container
-                  %button.button-block 日本語で読む
-                .room-description-sentence
-                  %span Fully furnished, light, airy, double room with desk in spacious Victorian house. 
-                  %br
-                  %span Separate living and dining areas.
-                  %br
-                  %span Quiet, considerate housemates.
-                  %br
-                  %span Foodies especially welcome. Gay friendly.
-                  %br
-                  %br
-                  %span Excellent transport links to central London.
-          %hr
-          .details.clearfix
-            .col-title
-              %span ハウスルール
-            .col-details
-              %span 禁煙
-              %br
-              %span ペットお断り
-              %br
-              %span パーティー&イベントお断り
-              %br
-              %span 乳児・子どもに安全とは言えません/不向き(0-12歳)
-              %br
-              %span チェックイン時間は、15:00以降です。
-          %hr
-          .details.clearfix
-            .col-title
-              %span 安全設備
-            .col-details
-              .col-details-1
-                %span 煙感知器
-                %br
-                %span 一酸化炭素警報機
-                %br
-                %span 救急箱
-              .col-details-2
-                %span 防災カード
-                %br
-                %span 消火器
-          %hr
-          .details.clearfix
-            .col-title
-              %span 空室状況
-            .col-details
-              .col-details-1
-                %span 最低1泊
-              .col-details-2
-                = link_to '#', class: 'view-calendar' do
-                  %strong.calendar-link カレンダーを見る
-          %hr
-          .details.clearfix
-            .col-title
-              %span ガイドブック
-            .col-details
-              = link_to '#', class: 'view-guide', id: 'to_do' do
-                %strong ロンドンでやるべきこと
-    %hr
-    .reviews-container.clearfix
-      .details-row.review-top.clearfix
-        .details-col.review-details-col.clearfix
-          .details-col-75
-            %span レビュー107件
-            %span ★★★★★
-          .details-col-25
-            %span 検索
-        %hr
-    .host-profile
+/ ジャンボトロン
+.jumbotron.row-space-0{:style => "margin-top: -20px; background: none;"}
+/ サマリー
+.container-fluid.container-listing-show
+  .container
+    .listing-summary.row-space-3.row-space-top-3
+      .row
+        .col-md-3.text-center.row-space-2
+          -# = link_to user_path(@listing.user) do
+          -#   = image_tag @listing.user.image,class:"img-circle profile-2"
+          -# %h5= @listing.user.name
+        .col-md-6
+          .listing-title{:style => "font-size:24px;"}
+            -# = @listing.listing_title
+          .row.row-space-top-4
+            .col-sm-3.col-xs-3.text-center
+              %i.fa.fa-home.fa-3x
+              -# %h5= @listing.home_type
+            .col-sm-3.col-xs-3.text-center
+              %i.fa.fa-linux.fa-3x{"aria-hidden" => "true"}
+              -# %h5= @listing.pet_type
+            .col-sm-3.col-xs-3.text-center
+              %i.fa.fa-bug.fa-3x{"aria-hidden" => "true"}
+              -# %h5= @listing.pet_size
+            .col-sm-3.col-xs-3.text-center
+              %i.fa.fa-clock-o.fa-3x{"aria-hidden" => "true"}
+              %h5
+                -# = @listing.breeding_years
+                年
+        / 予約フォーム
+        .col-md-3
+          .panel.panel-default.panel-show
+            .panel-heading
+              %span{:style => "font-size:16px;"}
+                6000
+                円（一晩あたり）
+            .panel-body.panel-real
+              = form_for [@room] do |f|
+                / これは、予約をするときに、一緒におくる、データです。
+                -# = f.hidden_field :listing_id, value:
+                -# = f.hidden_field :price_pernight, value:
+                -# = f.hidden_field :total_price, id:'reservation_total_price'
+                .row.row-space-2
+                  .col-md-6
+                    %label Check In
+                    = f.text_field :name, :class => 'form-control', placeholder: '開始'
+                  .col-md-6
+                    %label Check Out
+                    = f.text_field :address, :class => 'form-control', placeholder: '終了'
+                .actions.text-center
+                  = f.submit "予約する", class: "btn btn-danger btn-lg btn-block"
+/ メインコンテント
+.container
+  .row
+    .col-md-9
+      %h3.row-space-3 このリスティングについて
+      %p
+        -# = @listing.listing_content
+        -# = @listing.listing_content
+        -# = @listing.listing_content
+        -# = @listing.listing_content
+        -# = @listing.listing_content
+        -# = @listing.listing_content
+        -# = @listing.listing_content
+        -# = @listing.listing_content
+        -# = @listing.listing_content
+        -# = @listing.listing_content
+        -# = @listing.listing_content
+        -# = @listing.listing_content
+        -# = @listing.listing_content
+        -# = @listing.listing_content
+    .col-md-3
+  / レビュー
+  .row
+    .col-md-9
+      %h3.row-space-3 レビュー
+    .col-md-3
+  / google map
+  .row
+    .col-md-9
+      %h3.row-space-3 アクセス
+      #map
+    .col-md-3
+  :css
+    #map{
+        width: 100%;
+        height: 350px;
+    }
+  / 近くのリスティング
+  .row
+    .col-md-9
+      %h3.row-space-3 近くのリスティング
+      -# - for listing in @listing.nearbys(10)
+        .col-md-4
+          .panel.panel-default
+            .panel-heading.panel-listing.text-center{:style => "padding: 0;"}
+              -# = link_to(listing) do
+              -#   = image_tag listing.photos[0].image.url(:medium)  if listing.photos.length > 0
+            .panel-body
+              .row
+                .col-md-8.col-xs-8
+                  -# = link_to listing.listing_title, listing
+                  %br/
+                .col-md-3.col-xs-3
+                  -# = image_tag listing.user.image,class:"img-circle profile-1"
+                .price-card
+                  -# = listing.price_pernight
+                  3000
+                  円
+    .col-md-3
+:javascript
+  function initMap() {
+    
+    // Create the map.
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 14,
+      center: {lat: <%=@room.latitude %>, lng: <%=@room.longitude %>},
+      mapTypeId: google.maps.MapTypeId.TERRAIN
+    });
+  
+  
+    // Add the circle for this city to the map.
+    var cityCircle = new google.maps.Circle({
+      strokeColor: '#FF0000',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#FF0000',
+      fillOpacity: 0.35,
+      map: map,
+      center: {lat: 0, lng: 0},
+      radius: 500
+    });
+    
+  }
+%script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyB1BoiSo2jL950_AuFzV-f9ETgKn0uQl2I&signed_in=true&callback=initMap"}
 
-  .room-section
-    .map-panel#map
+
+-# .main-content.clearfix
+-#   .room-section
+-#     .summary-container.clearfix
+-#       .summary-row
+-#         .summary-col
+-#           .host-image-container
+-#             .image-col
+-#               = link_to '#host-profile' do
+-#                 = image_tag 'https://a1.muscache.com/im/users/35142183/profile_pic/1433607298/original.jpg?aki_policy=profile_x_medium', class: 'host-image'
+-#           .summary-text-container
+-#             %span#room-name= @room.name
+-#             %br
+-#             %span#room-addres= @room.address
+-#             %span#room-rate ★★★★★ 107
+-#     %hr
+-#     .details-container.clearfix
+-#       .details-row.clearfix
+-#         .details-col.clearfix
+-#           %h4 リスティングについて
+-#           %p.about-listing
+-#             %span Fully furnished, light, airy, double room with desk in spacious Victorian house.
+-#             %br
+-#             %span Separate living and dining areas.
+-#             %br
+-#             %span Quiet, considerate housemates.
+-#             %br
+-#             %span Foodies especially welcome. Gay friendly.
+-#           %p
+-#             %span Excellent transport links to central London.
+-#           .contact-host
+-#             %button
+-#               %span ホストに連絡
+-#           %hr
+-#           .details.clearfix
+-#             .col-title
+-#               %span お部屋
+-#             .col-details
+-#               .col-details-1
+-#                 %span 収容人数：
+-#                 %strong 1
+-#                 %br
+-#                 %span 寝室：
+-#                 %strong 1
+-#                 %br
+-#                 %span チェックイン：
+-#                 %strong 15:00時以降ならいつでも
+-#                 %br
+-#                 %span 建物タイプ：
+-#                 %strong 一軒家
+-#               .col-details-2
+-#                 %span バスルーム：
+-#                 %strong 1.5 (共同のバスルーム)
+-#                 %br
+-#                 %span ベッド：
+-#                 %strong 1
+-#                 %br
+-#                 %span チェックアウト：
+-#                 %strong 11:00
+-#                 %br
+-#                 %span 部屋タイプ：
+-#                 %strong 個室
+-#           %hr
+-#           .details.clearfix
+-#             .col-title
+-#               %span アメニティ・設備
+-#             .col-details
+-#               .col-details-1
+-#                 %strong ワイヤレスインターネット
+-#                 %br
+-#                 %strong キッチン
+-#                 %br
+-#                 %strong テレビ
+-#                 %br
+-#                 %strong 洗濯機
+-#                 %br
+-#                 %strong 敷地内無料駐車場
+-#                 %br
+-#                 %strong 暖房
+-#                 %br
+-#                 %strong ビル内にエレベーターあり
+-#                 %br
+-#                 %strong 乾燥機
+-#                 %br
+-#                 %strong インターネット
+-#                 %br
+-#                 %strong ファミリー/子ども連れOK
+-#                 %br
+-#                 %strong ペットOK
+-#                 %br
+-#                 %strong 喫煙OK
+-#                 %br
+-#                 %strong イベントに最適
+-#                 %br
+-#                 %strong ヘアドライヤー
+-#                 %br
+-#                 %strong 朝食
+-#                 %br
+-#                 %strong ジャクージ&高級風呂
+-#                 %br
+-#               .col-details-2
+-#                 %strong エアコン
+-#                 %br
+-#                 %strong ケーブルテレビ
+-#                 %br
+-#                 %strong セルフチェックイン
+-#                 %br
+-#                 %strong プール
+-#                 %br
+-#                 %strong アイロン
+-#                 %br
+-#                 %strong ノートPC向きのワークスペース
+-#                 %br
+-#                 %strong 室内暖炉・薪ストーブ・囲炉裏
+-#                 %br
+-#                 %strong 必需品
+-#                 %br
+-#                 %strong ハンガー
+-#                 %br
+-#                 %strong シャンプー
+-#                 %br
+-#                 %strong ジム
+-#                 %br
+-#                 %strong 車いすOK
+-#                 %br
+-#                 %strong ワイヤレスインターホン
+-#                 %br
+-#                 %strong ドアマン
+-#                 %br
+-#                 %strong 専用のリビングルーム
+-#                 %br
+-#                 %strong 専用の玄関
+-#                 %br
+-#           %hr
+-#           .details.clearfix
+-#             .col-title
+-#               %span 料金
+-#             .col-details
+-#               .col-details-1
+-#                 %span 保証金：
+-#                 %strong ¥ 22571
+-#                 %br
+-#                 %span 週の割引率：
+-#                 %strong 10%
+-#               .col-details-2
+-#                 %span 月額割引率：
+-#                 %strong 20%
+-#                 %br
+-#                 %span キャンセル：
+-#                 %strong 普通
+-#           %hr
+-#           .details.clearfix
+-#             .col-title
+-#               %span お部屋の紹介
+-#             .col-details
+-#               .bed-type
+-#                 %spna ベッドのタイプ
+-#                 .bed-icon
+-#                   %i.fa.fa-bed.fa-2x
+-#                   %br
+-#                   %strong 1寝室
+-#                   %br
+-#                   %spna ダブルベット1
+-#               .room-description
+-#                 .button-container
+-#                   %button.button-block 日本語で読む
+-#                 .room-description-sentence
+-#                   %span Fully furnished, light, airy, double room with desk in spacious Victorian house. 
+-#                   %br
+-#                   %span Separate living and dining areas.
+-#                   %br
+-#                   %span Quiet, considerate housemates.
+-#                   %br
+-#                   %span Foodies especially welcome. Gay friendly.
+-#                   %br
+-#                   %br
+-#                   %span Excellent transport links to central London.
+-#           %hr
+-#           .details.clearfix
+-#             .col-title
+-#               %span ハウスルール
+-#             .col-details
+-#               %span 禁煙
+-#               %br
+-#               %span ペットお断り
+-#               %br
+-#               %span パーティー&イベントお断り
+-#               %br
+-#               %span 乳児・子どもに安全とは言えません/不向き(0-12歳)
+-#               %br
+-#               %span チェックイン時間は、15:00以降です。
+-#           %hr
+-#           .details.clearfix
+-#             .col-title
+-#               %span 安全設備
+-#             .col-details
+-#               .col-details-1
+-#                 %span 煙感知器
+-#                 %br
+-#                 %span 一酸化炭素警報機
+-#                 %br
+-#                 %span 救急箱
+-#               .col-details-2
+-#                 %span 防災カード
+-#                 %br
+-#                 %span 消火器
+-#           %hr
+-#           .details.clearfix
+-#             .col-title
+-#               %span 空室状況
+-#             .col-details
+-#               .col-details-1
+-#                 %span 最低1泊
+-#               .col-details-2
+-#                 = link_to '#', class: 'view-calendar' do
+-#                   %strong.calendar-link カレンダーを見る
+-#           %hr
+-#           .details.clearfix
+-#             .col-title
+-#               %span ガイドブック
+-#             .col-details
+-#               = link_to '#', class: 'view-guide', id: 'to_do' do
+-#                 %strong ロンドンでやるべきこと
+-#     %hr
+-#     .reviews-container.clearfix
+-#       .details-row.review-top.clearfix
+-#         .details-col.review-details-col.clearfix
+-#           .details-col-75
+-#             %span レビュー107件
+-#             %span ★★★★★
+-#           .details-col-25
+-#             %span 検索
+-#         %hr
+-#     .host-profile
+
+-#   .room-section
+-#     .map-panel#map
 
 = render 'footer'
