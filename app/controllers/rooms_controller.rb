@@ -14,16 +14,6 @@ class RoomsController < ApplicationController
   end
   def show
     @room = Room.find(params[:id])
-
-    respond_to do |format|
-      format.html
-      format.json { render json: {
-                                    latitude: @room.latitude,
-                                    longitude: @room.longitude
-                                  }
-                  }
-    end
-
   end
 
 end

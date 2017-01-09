@@ -13,6 +13,8 @@
     .listing-summary.row-space-3.row-space-top-3
       .row
         .col-md-3.text-center.row-space-2
+          %span= @room.name
+          %span= @room.latitude
           -# = link_to user_path(@listing.user) do
           -#   = image_tag @listing.user.image,class:"img-circle profile-2"
           -# %h5= @listing.user.name
@@ -49,11 +51,14 @@
                 -# = f.hidden_field :total_price, id:'reservation_total_price'
                 .row.row-space-2
                   .col-md-6
-                    %label Check In
+                    %label チェックイン
                     = f.text_field :name, :class => 'form-control', placeholder: '開始'
                   .col-md-6
-                    %label Check Out
+                    %label チェックアウト
                     = f.text_field :address, :class => 'form-control', placeholder: '終了'
+                  .col-md-12
+                    %label ゲスト
+
                 .actions.text-center
                   = f.submit "予約する", class: "btn btn-danger btn-lg btn-block"
 / メインコンテント
@@ -91,7 +96,7 @@
   :css
     #map{
         width: 100%;
-        height: 350px;
+        height: 500px;
     }
   / 近くのリスティング
   .row
@@ -115,32 +120,6 @@
                   3000
                   円
     .col-md-3
-:javascript
-  function initMap() {
-    
-    // Create the map.
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 14,
-      center: {lat: <%=@room.latitude %>, lng: <%=@room.longitude %>},
-      mapTypeId: google.maps.MapTypeId.TERRAIN
-    });
-  
-  
-    // Add the circle for this city to the map.
-    var cityCircle = new google.maps.Circle({
-      strokeColor: '#FF0000',
-      strokeOpacity: 0.8,
-      strokeWeight: 2,
-      fillColor: '#FF0000',
-      fillOpacity: 0.35,
-      map: map,
-      center: {lat: 0, lng: 0},
-      radius: 500
-    });
-    
-  }
-%script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyAXbvOKObMqITgrrvsCSne77MDEA3T9f8o&callback=initMap"}
-
 
 -# .main-content.clearfix
 -#   .room-section
@@ -380,3 +359,26 @@
 -#     .map-panel#map
 
 = render 'footer'
+
+:javascript
+  function initMap() {
+    // Create the map.
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: {lat: #{@room.latitude}, lng: #{@room.longitude}},
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+    // Add the circle for this city to the map.
+    var cityCircle = new google.maps.Circle({
+      strokeColor: '#FF0000',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#FF0000',
+      fillOpacity: 0.35,
+      map: map,
+      center: {lat: #{@room.latitude}, lng: #{@room.longitude}},
+      radius: 500
+    });
+    
+  }
+%script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyAXbvOKObMqITgrrvsCSne77MDEA3T9f8o&callback=initMap"}
