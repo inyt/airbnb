@@ -3,7 +3,7 @@
 .clearfix
 
 .cover-image
-  = image_tag 'room/greece_2.jpg', class: 'cover-image'
+  = image_tag @room.images.first.image_url, class: 'cover-image'
 
 / ジャンボトロン
 .jumbotron.row-space-0{:style => "margin-top: -20px; background: none;"}
@@ -12,32 +12,29 @@
   .container
     .listing-summary.row-space-3.row-space-top-3
       .row
-        .col-md-3.text-center.row-space-2
-          %span= @room.name
-          %span= @room.latitude
-          -# = link_to user_path(@listing.user) do
-          -#   = image_tag @listing.user.image,class:"img-circle profile-2"
-          -# %h5= @listing.user.name
+        .col-md-2.text-center.row-space-2
+          = link_to '#host-profile' do
+            = image_tag 'https://a1.muscache.com/im/users/35142183/profile_pic/1433607298/original.jpg?aki_policy=profile_x_medium', class: 'img-circle', style: "width: 90px"
+          %h5 Michael
         .col-md-6
           .listing-title{:style => "font-size:24px;"}
-            -# = @listing.listing_title
+            = @room.name
+            %p
           .row.row-space-top-4
             .col-sm-3.col-xs-3.text-center
               %i.fa.fa-home.fa-3x
-              -# %h5= @listing.home_type
+              %h5 まるまる貸切
             .col-sm-3.col-xs-3.text-center
-              %i.fa.fa-linux.fa-3x{"aria-hidden" => "true"}
-              -# %h5= @listing.pet_type
+              %i.fa.fa-users.fa-3x{"aria-hidden" => "true"}
+              %h5 3人
             .col-sm-3.col-xs-3.text-center
-              %i.fa.fa-bug.fa-3x{"aria-hidden" => "true"}
-              -# %h5= @listing.pet_size
+              %i.fa.fa-university.fa-3x{"aria-hidden" => "true"}
+              %h5 1寝室
             .col-sm-3.col-xs-3.text-center
-              %i.fa.fa-clock-o.fa-3x{"aria-hidden" => "true"}
-              %h5
-                -# = @listing.breeding_years
-                年
+              %i.fa.fa-bed.fa-3x{"aria-hidden" => "true"}
+              %h5 1ベッド
         / 予約フォーム
-        .col-md-3
+        .col-md-4
           .panel.panel-default.panel-show
             .panel-heading
               %span{:style => "font-size:16px;"}
@@ -61,65 +58,83 @@
 
                 .actions.text-center
                   = f.submit "予約する", class: "btn btn-danger btn-lg btn-block"
-/ メインコンテント
-.container
-  .row
-    .col-md-9
-      %h3.row-space-3 このリスティングについて
-      %p
-        -# = @listing.listing_content
-        -# = @listing.listing_content
-        -# = @listing.listing_content
-        -# = @listing.listing_content
-        -# = @listing.listing_content
-        -# = @listing.listing_content
-        -# = @listing.listing_content
-        -# = @listing.listing_content
-        -# = @listing.listing_content
-        -# = @listing.listing_content
-        -# = @listing.listing_content
-        -# = @listing.listing_content
-        -# = @listing.listing_content
-        -# = @listing.listing_content
-    .col-md-3
-  / レビュー
-  .row
-    .col-md-9
-      %h3.row-space-3 レビュー
-    .col-md-3
-  / google map
-  .row
-    .col-md-9
-      %h3.row-space-3 アクセス
-      #map
-    .col-md-3
-  :css
-    #map{
-        width: 100%;
-        height: 500px;
-    }
-  / 近くのリスティング
-  .row
-    .col-md-9
-      %h3.row-space-3 近くのリスティング
-      -# - for listing in @listing.nearbys(10)
-        .col-md-4
-          .panel.panel-default
-            .panel-heading.panel-listing.text-center{:style => "padding: 0;"}
-              -# = link_to(listing) do
-              -#   = image_tag listing.photos[0].image.url(:medium)  if listing.photos.length > 0
-            .panel-body
-              .row
-                .col-md-8.col-xs-8
-                  -# = link_to listing.listing_title, listing
-                  %br/
-                .col-md-3.col-xs-3
-                  -# = image_tag listing.user.image,class:"img-circle profile-1"
-                .price-card
-                  -# = listing.price_pernight
-                  3000
-                  円
-    .col-md-3
+%hr
+
+
+.container-fluid.container-listing-show
+  .container
+    .listing-summary.row-space-3.row-space-top-3
+      .row
+        .col-md-9
+          %h4.row-space-3 リスティングについて
+          .row
+            .col-md-6
+              %span 収容人数：
+              %strong 1
+              %br
+              %span 寝室：
+              %strong 1
+              %br
+              %span チェックイン：
+              %strong 15:00時以降ならいつでも
+              %br
+              %span 建物タイプ：
+              %strong 一軒家
+            .col-md-6
+              %span バスルーム：
+              %strong 1.5 (共同のバスルーム)
+              %br
+              %span ベッド：
+              %strong 1
+              %br
+              %span チェックアウト：
+              %strong 11:00
+              %br
+              %span 部屋タイプ：
+              %strong 個室
+        .col-md-3
+      / レビュー
+      .row
+        .col-md-9
+          %h4.row-space-3 レビュー
+        .col-md-3
+      / google map
+      .row
+        .col-md-9
+          %h4.row-space-3 ホストについて
+        .col-md-3
+      .row
+        .col-md-9
+          %h4.row-space-3 アクセス
+          #map
+        .col-md-3
+      :css
+        #map{
+            width: 100%;
+            height: 500px;
+        }
+      / 近くのリスティング
+      .row
+        .col-md-9
+          %h3.row-space-3 近くのリスティング
+          -# - for listing in @listing.nearbys(10)
+            .col-md-4
+              .panel.panel-default
+                .panel-heading.panel-listing.text-center{:style => "padding: 0;"}
+                  -# = link_to(listing) do
+                  -#   = image_tag listing.photos[0].image.url(:medium)  if listing.photos.length > 0
+                .panel-body
+                  .row
+                    .col-md-8.col-xs-8
+                      -# = link_to listing.listing_title, listing
+                      %br/
+                    .col-md-3.col-xs-3
+                      -# = image_tag listing.user.image,class:"img-circle profile-1"
+                    .price-card
+                      -# = listing.price_pernight
+                      3000
+                      円
+        .col-md-3
 
 -# .main-content.clearfix
 -#   .room-section

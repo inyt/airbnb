@@ -1,12 +1,4 @@
-%header.clearfix
-  .pull-left
-    = link_to "/" do
-      .icon_box
-        %i.fa.fa-bug.fa-2x
-  .pull-right
-    =link_to "/signup_login", class: "header_link_container" do
-      .header_content
-        %span ホストする時間がない方はこちら
+= render 'rooms/header'
 
 .container-fluid
   .hosting-main-content.row

@@ -1,0 +1,58 @@
+= render 'rooms/header'
+
+.container-fluid
+  .hosting-main-content.row
+    .col-md-7
+      .landing__left-col-content
+        .space-5
+      .landing__step-content
+        .h3
+          %span お部屋の詳細を登録してください
+        .container-fluid
+          = form_for @room do |f|
+            .row
+              .col-md-12.space-1
+                .form-group
+                  %label{for: 'room_name'} お部屋の名前を記入して下さい
+                  = f.text_field :name, class: 'form-control', id: 'room_name'
+            .row
+              .col-md-12.space-1
+                .form-group
+                  %label{for: 'room_detail'} お部屋の説明を記入して下さい
+                  = f.text_area :detail, class: 'form-control', id: 'room_detail', rows: 3
+            .row
+              .col-md-12.space-1
+                .form-group
+                  %label{for: 'room_image'} お部屋の写真を選択して下さい
+                  = f.text_field :image, class: 'form-control', id: 'room_image'
+            .row
+              .col-md-12.space-1
+                .form-group
+                  %label{for: 'price'} 1泊当たりの金額を記入して下さい
+                  = f.text_field :price, class: 'form-control', id: 'price'
+            .row
+              .col-md-6.space-1
+                %h5 お部屋のタイプを選択して下さい
+                = f.select :room_type, { 貸切: "reserved", 個室: "single", シェアルーム: "share"}, {}, {class: 'form-control'}
+              .col-md-6.space-1
+                %h5 宿泊可能人数を選択して下さい
+                = f.select :capacity, { "1人": "1", "2人": "2", "3人": "3", "4人": "4", "5人以上": "5人以上"}, {}, {class: 'form-control'}
+            .row
+              .col-md-6.space-1
+                %h5 寝室数を選択して下さい
+                = f.select :bedroom_num, { 寝室1室: "1", 寝室2室: "2", 寝室3室: "3", 寝室4室以上: "4以上"}, {}, {class: 'form-control'}
+              .col-md-6.space-1
+                %h5 ベッド数を選択して下さい
+                = f.select :bed_num, { ベッド1台: "1", ベッド2台: "2", ベッド3台: "3", ベッド4台以上: "4以上"}, {}, {class: 'form-control'}
+            .row.space-1
+              .col-md-12
+                %h5 都市を選択して下さい
+                = f.select :city, [ "東京", "ニューヨーク", "ロンドン", "北京", "ドバイ", "ケープタウン", "リオデジャネイロ", "モスクワ"], {}, {class: 'form-control', placeholder: "都市名を選択してください"}
+            .row.space-1
+              .col-md-12
+                = f.submit class: 'btn btn-danger btn-block', value: "登録"
+    .col-md-5
+      = image_tag 'hosting/flower'
+
+
+= render 'rooms/footer'

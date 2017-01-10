@@ -14,12 +14,12 @@
     =link_to "/signup_login", class: "header_link_container" do
       .header_content
         %span ヘルプ
+  -# .pull-right
+  -#   =link_to "/signup_login", class: "header_link_container" do
+  -#     .header_content
+  -#       %span ホストする時間がない方はこちら
   .pull-right
-    =link_to "/signup_login", class: "header_link_container" do
-      .header_content
-        %span ホストする時間がない方はこちら
-  .pull-right
-    =link_to "/signup_login", class: "header_link_container" do
+    =link_to new_room_path, class: "header_link_container" do
       .header_content
         %span ホストになる
 

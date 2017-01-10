@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
   def index
-    @rooms = Room.page(params[:page])
+    @rooms = Room.all
 
     # respond_to do |format|
     #   format.html
@@ -12,8 +12,22 @@ class RoomsController < ApplicationController
     #               }
     # end
   end
+
   def show
     @room = Room.find(params[:id])
   end
 
+  def new
+    @room = Room.new
+  end
+
+  def create
+    @room = Room.create(room_params)
+    redirect_to root_path
+  end
+
+  private
+  def room_params
+    params.require(:room).permit(:name, :detail, :image, :price, :room_type, :capacity, :bedroom_num, :bed_num, :city)
+  end
 end

@@ -8,8 +8,12 @@
     .row
       - @rooms.each_with_index do |room, i|
         = link_to "/rooms/#{i+1}" do
-          .col-md-4.margin-48px
-            = image_tag room.images.first.image_url
+          .col-md-4.margin-48px.color-484848
+            = image_tag room.image
+            %strong.text-left ¥
+            %strong.text-lert= room.price
+            %span.text-left
+            %span.text-left= room.name
 
   //自動ローディング
   -# .container-fluid
