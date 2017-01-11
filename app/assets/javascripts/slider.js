@@ -17,7 +17,7 @@ $(function () {
         $slides.eq(currentIndex).fadeIn();
 
         // 7500 ミリ秒ごとに showNextSlide 関数を実行
-        setInterval(showNextSlide, 7500);
+        setInterval(showNextSlide, 3000);
 
         // 次のスライドを表示する関数
         function showNextSlide () {
