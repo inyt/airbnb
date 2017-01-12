@@ -41,7 +41,7 @@
                 6000
                 円（一晩あたり）
             .panel-body.panel-real
-              = form_for [@room] do |f|
+              = form_for [@room, @room.reservations.new] do |f|
                 / これは、予約をするときに、一緒におくる、データです。
                 -# = f.hidden_field :listing_id, value:
                 -# = f.hidden_field :price_pernight, value:
@@ -49,13 +49,14 @@
                 .row.row-space-2
                   .col-md-6
                     %label チェックイン
-                    = f.text_field :name, :class => 'form-control', placeholder: '開始'
+                    .date-range-picker
+                      = f.text_field :start_date, name: 'startDate', class: 'form-control', placeholder: '開始'
                   .col-md-6
                     %label チェックアウト
-                    = f.text_field :address, :class => 'form-control', placeholder: '終了'
+                    = f.text_field :end_date, name: 'endDate',class: 'form-control', placeholder: '終了'
                   .col-md-12
-                    %label ゲスト
-
+                    %p
+                    %p
                 .actions.text-center
                   = f.submit "予約する", class: "btn btn-danger btn-lg btn-block"
 %hr
@@ -104,37 +105,27 @@
           %h4.row-space-3 ホストについて
         .col-md-3
       .row
-        .col-md-9
+        .col-md-12
           %h4.row-space-3 アクセス
           #map
-        .col-md-3
-      :css
-        #map{
-            width: 100%;
-            height: 500px;
-        }
+          :css
+            #map{
+                width: 100%;
+                height: 650px;
+            }
       / 近くのリスティング
       .row
-        .col-md-9
-          %h3.row-space-3 近くのリスティング
-          -# - for listing in @listing.nearbys(10)
-            .col-md-4
-              .panel.panel-default
-                .panel-heading.panel-listing.text-center{:style => "padding: 0;"}
-                  -# = link_to(listing) do
-                  -#   = image_tag listing.photos[0].image.url(:medium)  if listing.photos.length > 0
-                .panel-body
-                  .row
-                    .col-md-8.col-xs-8
-                      -# = link_to listing.listing_title, listing
-                      %br/
-                    .col-md-3.col-xs-3
-                      -# = image_tag listing.user.image,class:"img-circle profile-1"
-                    .price-card
-                      -# = listing.price_pernight
-                      3000
-                      円
-        .col-md-3
+        .col-md-12
+          %h3.row-space-3 類似するリスティング
+          - 3.times do |i|
+            = link_to "/rooms/#{i+1}" do
+              .col-md-4.margin-48px.color-484848
+                = image_tag @rooms[i].image
+                %strong.text-left ¥
+                %strong.text-lert= @rooms[i].price
+                %span.text-left
+                %span.text-left= @rooms[i].name
+
 
 -# .main-content.clearfix
 -#   .room-section
@@ -379,8 +370,10 @@
   function initMap() {
     // Create the map.
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 15,
+      zoom: 14,
       center: {lat: #{@room.latitude}, lng: #{@room.longitude}},
+      scrollwheel: false,
+      mapTypeControl: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
     // Add the circle for this city to the map.
