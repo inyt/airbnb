@@ -2,7 +2,7 @@
 //   $("#price-slide").slider({});
 // })
 $(function () {
-
+ $(document).on('turbolinks:load', function(){
     /*
      * Slideshow
      */
@@ -37,6 +37,6 @@ $(function () {
         }
 
     });
-
+  });
 });
 
