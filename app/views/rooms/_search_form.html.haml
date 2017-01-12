@@ -4,27 +4,32 @@
       .search-form-location
         %label.search-form-label{for: 'search-location'}
           %span 場所
-        %input#search-location{name: 'location',placeholder: '行き先、都市、住所'}
+        %input#search-location{name: 'location',placeholder: '行き先、都市、住所', class: 'form-control'}
       .search-form-dates
         .container-fluid
           %label.search-form-label{for: 'start-date'}
             %span 日時
-            .row
-              .col-sm-5.input-date
-                .date-range-picker
-                  %input{type: 'text', name: 'startDate', id: 'start-date', class: 'input-date'}
-              .col-sm-1.text-center
-                %span →
-              .col-sm-5.input-date
-                %input{type: 'text', name: 'endDate', id: 'end-date', class: 'input-date'}
-                .date-input.date-end
-                  -# %button
+          .row
+            .col-sm-5.input-date
+              .date-range-picker
+                %input{type: 'text', name: 'startDate', id: 'start-date', placeholder: 'チェックイン', class: 'input-date form-control'}
+            .col-sm-1.text-center
+              %p#date-arrow →
+            .col-sm-5.input-date
+              %input{type: 'text', name: 'endDate', id: 'end-date', placeholder: 'チェックアウト', class: 'input-date form-control'}
+              .date-input.date-end
+                -# %button
       .search-form-guests
         %label.search-form-label{for: 'how-many-guests'}
           %span ゲスト
         .guest-picker-trigger
-          %button
-            %span 宿泊1人
+          %select.form-control
+            %option{:value => "1"} 宿泊1人
+            %option{:value => "2"} 宿泊2人
+            %option{:value => "3"} 宿泊3人
+            %option{:value => "4"} 宿泊4人
+            %option{:value => "5"} 宿泊5人
+            %option{:value => "6人以上"} 宿泊6人以上
       .search-form-submit
         = link_to search_rooms_path do
           %button.btn{type: 'submit'}
