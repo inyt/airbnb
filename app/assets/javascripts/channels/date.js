@@ -1,6 +1,7 @@
 $(function() {
   $(document).on('turbolinks:load', function(){
-    $('input[name="startDate"]').daterangepicker({
+    $input = $('input[name="startDate"], input[name="endDate"]');
+    $input.daterangepicker({
         autoUpdateInput: false,
         autoApply: true,
         format: 'YYYY/MM/DD',
@@ -10,13 +11,13 @@ $(function() {
         }
     });
 
-    $('input[name="startDate"]').on('apply.daterangepicker', function(ev, picker) {
-        $(this).val(picker.startDate.format('YYYY/MM/DD'));
+    $input.on('apply.daterangepicker', function(ev, picker) {
+        $('input[name="startDate"]').val(picker.startDate.format('YYYY/MM/DD'));
         $('input[name="endDate"]').val(picker.endDate.format('YYYY/MM/DD'));
     });
 
-    $('input[name="startDate"]').on('cancel.daterangepicker', function(ev, picker) {
-        $(this).val('');
+    $input.on('cancel.daterangepicker', function(ev, picker) {
+        $input.val('');
     });
   });
 });

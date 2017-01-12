@@ -2,7 +2,8 @@
   .pull-left
     = link_to "/" do
       .icon_box
-        %i.fa.fa-font.fa-2x#icon
+        = image_tag '/images/favicon.ico.png', class: 'img-responsive'
+
   - if current_user
     .pull-right.height_100
       = link_to destroy_user_session_path, method: :delete, class: "header_link_container" do
