@@ -2,7 +2,7 @@
   .pull-left
     = link_to "/" do
       .icon_box
-        %i.fa.fa-bug.fa-2x
+        %i.fa.fa-font.fa-2x#icon
   - if current_user
     .pull-right.height_100
       = link_to destroy_user_session_path, method: :delete, class: "header_link_container" do
