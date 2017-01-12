@@ -26,5 +26,6 @@
           %button
             %span 宿泊1人
       .search-form-submit
-        %button.btn{type: 'submit'}
-          .submit-text 探す
+        = link_to search_rooms_path do
+          %button.btn{type: 'submit'}
+            .submit-text 探す
