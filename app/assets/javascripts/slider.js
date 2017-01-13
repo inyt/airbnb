@@ -9,7 +9,7 @@ $(function () {
     // slideshow クラスを持った要素ごとに処理を実行
     $('.slide-container').each(function () {
 
-        var $slides = $(this).find('img'), // すべてのスライド
+        var $slides = $(this).find('.slide-content'), // すべてのスライド
             slideCount = $slides.length,   // スライドの点数
             currentIndex = 0;              // 現在のスライドを示すインデックス
 

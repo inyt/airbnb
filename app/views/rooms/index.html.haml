@@ -5,8 +5,8 @@
   = render 'search_form'
 
   .container-fluid
-    .row
-      .h4 東京のお家
+    .row.margin-48px
+      .h4 お家
       - @rooms.each_with_index do |room, i|
         = link_to "/rooms/#{i+1}" do
           .col-md-4.margin-48px.color-484848

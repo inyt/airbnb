@@ -1,18 +1,4 @@
-.text-header-container{
-  width: 60%;
-  h1.text-header{
-    font-family: inherit;
-    font-size: 48px;
-    line-height: 56px;
-    letter-spacing: -0.8px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    color: #484848;
-    margin: 0px;
-    font-weight: 200;
-    span.text-airbnb{
-      color: #FF5A5F;
-      font-weight: 700;
-    }
-  }
+.header{
+  height: 60px;
+  border-bottom: none;
 }
