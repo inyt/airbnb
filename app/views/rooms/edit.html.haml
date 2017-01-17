@@ -7,7 +7,7 @@
         .space-5
       .landing__step-content
         .h3
-          %span お部屋の詳細を登録してください
+          %span お部屋の詳細を編集して下さい
         .container-fluid
           = form_for @room do |f|
             .row
@@ -58,13 +58,11 @@
 
 :javascript
   function init() {
-  
     var input = /** @type {!HTMLInputElement} */(
         document.getElementById('reg-address'));
-  
-  
+
     var autocomplete = new google.maps.places.Autocomplete(input);
-  
+
     autocomplete.addListener('place_changed', function() {
       var place = autocomplete.getPlace();
       var lat = place.geometry.location.lat();
@@ -77,7 +75,7 @@
         window.alert("Autocomplete's returned place contains no geometry");
         return;
       }
-  
+
       var address = '';
       if (place.address_components) {
         address = [
@@ -86,9 +84,7 @@
           (place.address_components[2] && place.address_components[2].short_name || '')
         ].join(' ');
       }
-  
     });
-  
   }
 
 %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyAXbvOKObMqITgrrvsCSne77MDEA3T9f8o&libraries=places&callback=init"}
