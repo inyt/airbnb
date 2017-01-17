@@ -1,7 +1,9 @@
 .search-form
-  %form
+  = form_tag search_rooms_path, method: :get do
     .input-wrapper
       .search-form-location
+        = hidden_field_tag :lat
+        = hidden_field_tag :lng
         %label.search-form-label{for: 'search-location'}
           %span 場所
         %input#search-location{name: 'location',placeholder: '行き先、都市、住所', class: 'form-control'}
@@ -31,6 +33,41 @@
             %option{:value => "5"} 宿泊5人
             %option{:value => "6人以上"} 宿泊6人以上
       .search-form-submit
-        = link_to search_rooms_path do
-          %button.btn{type: 'submit'}
-            .submit-text 探す
+        = submit_tag "探す", class: "btn btn-danger"
+
+:javascript
+  function init() {
+  
+    var input = /** @type {!HTMLInputElement} */(
+        document.getElementById('search-location'));
+  
+  
+    var autocomplete = new google.maps.places.Autocomplete(input);
+  
+    autocomplete.addListener('place_changed', function() {
+      var place = autocomplete.getPlace();
+      var lat = place.geometry.location.lat();
+      var lng = place.geometry.location.lng();
+
+      document.getElementById('lat').value = lat ;
+      document.getElementById('lng').value = lng ;
+
+      if (!place.geometry) {
+        window.alert("Autocomplete's returned place contains no geometry");
+        return;
+      }
+  
+      var address = '';
+      if (place.address_components) {
+        address = [
+          (place.address_components[0] && place.address_components[0].short_name || ''),
+          (place.address_components[1] && place.address_components[1].short_name || ''),
+          (place.address_components[2] && place.address_components[2].short_name || '')
+        ].join(' ');
+      }
+  
+    });
+  
+  }
+
+%script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyAXbvOKObMqITgrrvsCSne77MDEA3T9f8o&libraries=places&callback=init"}
