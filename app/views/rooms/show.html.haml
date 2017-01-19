@@ -3,11 +3,10 @@
 .clearfix
 
 .cover-image
-  = image_tag @room.images.first.image_url, class: 'cover-image'
+  - if @room.photos.length > 0
+    = image_tag @room.photos[0].image(:original), class: 'cover-image'
 
-/ ジャンボトロン
 .jumbotron.row-space-0{:style => "margin-top: -20px; background: none;"}
-/ サマリー
 .container-fluid.container-listing-show
   .container
     .row
@@ -98,17 +97,15 @@
               %br
               %span 部屋タイプ：
               %strong 個室
-        .col-md-3
-      / レビュー
-      .row
-        .col-md-9
-          %h4.row-space-3 レビュー
-        .col-md-3
-      / google map
-      .row
-        .col-md-9
-          %h4.row-space-3 ホストについて
-        .col-md-3
+      -#   .col-md-3
+      -# / レビュー
+      -# .row
+      -#   .col-md-9
+      -#     %h4.row-space-3 レビュー
+      -# .row
+      -#   .col-md-9
+      -#     %h4.row-space-3 ホストについて
+      -#   .col-md-3
       .row
         .col-md-12
           %h4.row-space-3 アクセス
@@ -125,7 +122,7 @@
           - 3.times do |i|
             = link_to "/rooms/#{i+1}" do
               .col-md-4.margin-48px.color-484848
-                = image_tag @rooms[i].image
+                = image_tag @rooms[i].photos[0].image(:original)
                 %strong.text-left ¥
                 %strong.text-lert= @rooms[i].price
                 %span.text-left

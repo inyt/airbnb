@@ -1,0 +1,25 @@
+// Place all the styles related to the Photos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@media (max-width: 768px){
+  .dz-preview, .dz-processing, .dz-image-preview, .dz-error, .dz-complete {
+      margin: 10px 0!important;
+      width: 100%;
+  }
+  .dropzone .dz-preview .dz-image {
+    width: 100%;   
+  }
+  .dropzone .dz-preview .dz-image img {
+    height: 120px;    
+  }
+}
+
+.dropzone .dz-preview .dz-image img{
+  width: 100%;
+  height: 100%;
+}
+
+.dropzone.dz-started .dz-message {
+  display: block;
+}

@@ -2,7 +2,9 @@
 
 .container-fluid
   .hosting-main-content.row
-    .col-md-7
+    .col-md-4
+      = render 'rooms/edit_nav_bar'
+    .col-md-8
       .landing__left-col-content
         .space-5
       .landing__step-content
@@ -20,11 +22,6 @@
                 .form-group
                   %label{for: 'room_detail'} お部屋の説明を記入して下さい
                   = f.text_area :detail, class: 'form-control', id: 'room_detail', rows: 3
-            .row
-              .col-md-12.space-1
-                .form-group
-                  %label{for: 'room_image'} お部屋の写真を選択して下さい
-                  = f.text_field :image, class: 'form-control', id: 'room_image'
             .row
               .col-md-12.space-1
                 .form-group
@@ -51,8 +48,6 @@
             .row.space-1
               .col-md-12
                 = f.submit class: 'btn btn-danger btn-block', value: "登録"
-    .col-md-5
-      = image_tag 'hosting/flower'
 
 = render 'rooms/footer'
 

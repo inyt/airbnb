@@ -10,7 +10,7 @@
       - @rooms.each_with_index do |room, i|
         = link_to "/rooms/#{i+1}" do
           .col-md-4.margin-48px.color-484848
-            = image_tag room.image
+            = image_tag room.photos[0].image(:medium) if room.photos.length > 0
             %strong.text-left ¥
             %strong.text-lert= room.price
             %span.text-left

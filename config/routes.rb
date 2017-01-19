@@ -7,5 +7,11 @@ Rails.application.routes.draw do
       get :search
     end
   end
+  get 'manage-room/:id/photos' => 'rooms#photos', as: 'manage_room_photos'
+  resources :photos, only: [:create, :destroy] do
+    collection do
+      get :list
+    end
+  end
   root 'rooms#index'
 end
