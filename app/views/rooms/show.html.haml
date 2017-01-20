@@ -42,7 +42,7 @@
           .panel.panel-default.panel-show
             .panel-heading
               %span{:style => "font-size:16px;"}
-                6000
+                = @room.price
                 円（一晩あたり）
             .panel-body.panel-real
               = form_for [@room, @room.reservations.new] do |f|
@@ -72,8 +72,13 @@
       .row
         .col-md-9
           %h4.row-space-3 リスティングについて
+          %p= @room.detail
+          %hr
+
           .row
-            .col-md-6
+            .col-md-2
+              %strong お部屋
+            .col-md-5
               %span 収容人数：
               %strong 1
               %br
@@ -85,7 +90,7 @@
               %br
               %span 建物タイプ：
               %strong 一軒家
-            .col-md-6
+            .col-md-5
               %span バスルーム：
               %strong 1.5 (共同のバスルーム)
               %br
@@ -97,6 +102,7 @@
               %br
               %span 部屋タイプ：
               %strong 個室
+      %hr
       -#   .col-md-3
       -# / レビュー
       -# .row
