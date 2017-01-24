@@ -69,3 +69,4 @@ gem 'kaminari'
 gem 'geocoder'
 gem "paperclip", "~> 5.0.0"
 gem 'dropzonejs-rails'
+gem 'flickraw'

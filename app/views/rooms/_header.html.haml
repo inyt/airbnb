@@ -21,10 +21,15 @@
     =link_to "/signup_login", class: "header_link_container" do
       .header_content
         %span ヘルプ
-  .pull-right
-    =link_to new_room_path, class: "header_link_container" do
-      .header_content
-        %span ホストになる
+  - if user_signed_in?
+    .pull-right
+      =link_to new_room_path, class: "header_link_container" do
+        .header_content
+          %span ホストになる
+  - else
+    .pull-right
+      .header_content.header_link_container
+        %button.btn.btn-default.user-avator{"data-target": "#modal_signup", "data-toggle": "modal", type: "button"} ホストになる
 
 
 / Modal login
@@ -50,8 +55,7 @@
               .field
                 = f.check_box :remember_me
                 = f.label :remember_me
-            .actions
-              = f.submit value: 'ログイン', class: 'btn btn-block btn-danger btn-lg form-control'
+                = f.submit value: 'ログイン', class: 'btn btn-block btn-danger btn-lg form-control'
 
         = render "devise/shared/links"
         %span アカウントをお持ちではないですか？
