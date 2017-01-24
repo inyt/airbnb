@@ -55,11 +55,12 @@
               .field
                 = f.check_box :remember_me
                 = f.label :remember_me
-                = f.submit value: 'ログイン', class: 'btn btn-block btn-danger btn-lg form-control'
+                = f.submit value: 'ログイン', class: 'btn btn-block btn-danger btn-lg'
 
         = render "devise/shared/links"
         %span アカウントをお持ちではないですか？
-        %button.btn.btn-default.user-avator{"data-target": "#modal_signup", "data-toggle": "modal", type: "button"}  登録
+        %button.btn.btn-default.user-avator{"data-target": "#modal_signup", "data-toggle": "modal", type: "button", class: 'btn btn-danger'}  登録
+
 
 / Modal signup
 #modal_signup.modal.fade{"aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
@@ -68,7 +69,7 @@
       .modal-header
         %button.close{"aria-label" => "Close", "data-dismiss" => "modal", type: "button"}
           %span{"aria-hidden" => "true"} ×
-        %h4#myModalLabel.modal-title.text-center 登録してください
+        %h4#myModalLabel.modal-title.text-center ユーザー登録してください
       .modal-body
         = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
           = devise_error_messages!
@@ -92,7 +93,8 @@
               = f.label :password_confirmation
               %br/
               = f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'
-            .actions
-              = f.submit "登録", class: 'btn btn-block btn-danger btn-lg form-control'
+              %h1
+              = f.submit "登録", class: 'btn btn-block btn-danger btn-lg'
+
         = render "devise/shared/links"
 
