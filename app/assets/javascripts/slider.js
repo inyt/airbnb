@@ -1,8 +1,5 @@
-// $(function(){
-//   $("#price-slide").slider({});
-// })
-$(function () {
- $(document).on('turbolinks:load', function(){
+$(function(){
+  $(document).on('turbolinks:load', function(){
     /*
      * Slideshow
      */
@@ -37,6 +34,15 @@ $(function () {
         }
 
     });
+
+    /*
+     * room#search 価格スライドバー
+     */
+    $('#price-slide').slider().on('slide', function(e){
+      $('#min-price').text(e.value[0]);
+      $('#max-price').text(e.value[1]);
+    });
+
   });
 });
 
